@@ -1,0 +1,104 @@
+//color
+$body-background-color: #001e43;
+$nav-list-background-color: #fff;
+$nav-list-hover-background-color: #c9caca;
+$nav-list-is-open-background-color: #fafdff;
+$nav-list-item-background-color: #efefef;
+$nav-list-item-hover-background-color: #c9c9c4;
+$border-after-nav-list-color: rgba(0,0,0,0.2);
+$border-before-nav-list-color: rgba(255,255,255,0.2);
+$font-color: #001e43;
+//spacing
+$basis-spacing: 10px;
+$double-spacing: $basis-spacing * 2;
+//styling
+$border-nav-container: 1px solid rgba(0,0,0,0.2);
+$main-title-text-shadow: 0 0 6px rgba(0,0,0,0.2);
+//sizing
+$nav-container-width: 250px;
+
+//debug mode
+// .nav {outline: 1px dotted red;}
+// .nav-list {outline: 1px dashed blue;}
+// .nav-list__item {outline: 1px solid green;}
+// .nav-list__text, nav-list__item__text {outline: 2px solid yellow;}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body-background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+input,
+button,
+textarea,
+select {
+  /* デフォルトスタイルをリセット */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* font-familyを継承しないので、継承させる */
+  font-family: 'Montserrat', sans-serif;
+
+  /* iOSの角丸をリセット */
+  border-radius: 0;
+
+  /* box-size */
+  box-sizing: border-box;
+
+  /* 文字の大きさ iOSでズームさせないために16px以上を指定 */
+  font-size: 16px;
+
+  /* 文字色を親から継承 */
+  color: inherit;
+}
+
+label {
+  /* iOSでのlabelとinput,select,textareaの関連付け */
+  cursor: pointer;
+}
+
+/* スピンボタン非表示 chrome,safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button {
+  /*-webkit-appearance: none;
+  margin: 0;*/
+  display: none;
+}
+
+/* スピンボタン非表示(firefox) */
+input[type="number"],
+input[type="month"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="time"],
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
+/* クリアボタン非表示 */
+input[type="date"]::-webkit-clear-button,
+input[type="month"]::-webkit-clear-button,
+input[type="datetime-local"]::-webkit-clear-button,
+input[type="time"]::-webkit-clear-button,
+input[type="week"]::-webkit-clear-button {
+  -webkit-appearance: none;
+}

@@ -1,1 +1,23 @@
-home
+%h2.main-title Config
+.nav-container
+    %ul.nav-list.js-show
+        %span.nav-list__text Buyer
+        %li.nav-list__item
+            = link_to "Register", "#", class: "nav-list__item__text"
+        %li.nav-list__item
+            = link_to "List", "#", class: "nav-list__item__text", method: :get
+    %ul.nav-list.js-show
+        %span.nav-list__text Product
+        %li.nav-list__item
+            = link_to "Register", "#", class: "nav-list__item__text"
+        %li.nav-list__item
+            = link_to "List", "#", class: "nav-list__item__text", method: :get
+.nav-container
+    = button_to "Search page", "#", method: :get
+
+%h2.main-title Sale
+.nav-container
+    %ul.nav-list.js-show
+        %span.nav-list__text register
+        %li.nav-list__item
+            = link_to "Move to sale page", "#"
