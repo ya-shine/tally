@@ -1,0 +1,7 @@
+%h2.new-title Register Resident
+.new-container
+  = form_with model: @resident, local: true do |f|
+    .new-container__text-field
+      = f.text_field :name, placeholder: "input new resident", class: "new-container__text-field--input"
+    .new-container__text-field
+      = f.submit "SEND", class: "new-container__text-field--submit"
