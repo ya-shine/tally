@@ -2,24 +2,22 @@
 
 %h2.main-title Config
 .nav-container
-    %ul.nav-list.js-show
-        %span.nav-list__text Buyer
-        %li.nav-list__item
-            = link_to "Register", "#", class: "nav-list__item__text"
-        %li.nav-list__item
-            = link_to "List", "#", class: "nav-list__item__text", method: :get
-    %ul.nav-list.js-show
-        %span.nav-list__text Product
-        %li.nav-list__item
-            = link_to "Register", "#", class: "nav-list__item__text"
-        %li.nav-list__item
-            = link_to "List", "#", class: "nav-list__item__text", method: :get
-.nav-container
-    = button_to "Search page", "#", method: :get
+  %ul.nav-list.js-show
+    %span.nav-list__text buyer
+    %li.nav-list__item
+      =link_to "Register", new_buyer_path, class: "nav-list__item__text"
+    %li.nav-list__item
+      =link_to "List", buyers_path, class: "nav-list__item__text" 
+  %ul.nav-list.js-show
+    %span.nav-list__text product
+    %li.nav-list__item
+      %span.nav-list__item__text Register
 
-%h2.main-title Sale
+%h2.main-title Select buyer
 .nav-container
-    %ul.nav-list.js-show
-        %span.nav-list__text register
-        %li.nav-list__item
-            = link_to "Move to sale page", "#"
+  %ul.nav-list.js-show
+    %span.nav-list__text Select
+    - @buyers.each do |buyer|
+      %li.nav-list__item
+        %span.nav-list__item__text
+          = link_to(buyer.name, new_buyer_path) 
