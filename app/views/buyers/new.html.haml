@@ -1,7 +1,7 @@
-%h2.new-title Register Resident
+%h2.new-title Register buyer
 .new-container
-  = form_with model: @resident, local: true do |f|
+  = form_with model: @buyer, local: true do |f|
     .new-container__text-field
-      = f.text_field :name, placeholder: "input new resident", class: "new-container__text-field--input"
+      = f.text_field :name, placeholder: "input new buyer", class: "new-container__text-field--input"
     .new-container__text-field
       = f.submit "SEND", class: "new-container__text-field--submit"
