@@ -23,13 +23,13 @@ class BuyersController < ApplicationController
     end
 
     def destroy
-        buyer = Buyer.find(params[:id]
-        buyer.destroy)
+        buyer = Buyer.find(params[:id])
+        buyer.destroy
     end
 
     private
     def buyer_params
         params.require(:buyer).permit(:name)
     end
-    
+
 end
