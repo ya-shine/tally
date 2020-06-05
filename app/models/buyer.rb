@@ -1,5 +1,5 @@
 class Buyer < ApplicationRecord
 
-    vaslidates :name, presence: true
-    
+    validates :name, presence: true
+
 end
