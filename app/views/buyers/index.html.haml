@@ -1,0 +1,14 @@
+%h2.main-title List display of buyers
+.nav-container
+  - @buyers.each do |buyer|
+    %ul.nav-list.js-show
+      %span.nav-list__text= buyer.name
+      %li.nav-list__item
+        %span.nav-list__item__text
+          = link_to "Edit", "/buyers/#{buyer.id}/edit", method: :get
+      %li.nav-list__item
+        %span.nav-list__item__text
+          = link_to "Delete", "/buyers/#{buyer.id}", method: :delete
+.new-container
+  .new-container__text-field
+    = button_to "Top page", root_path, method: :get 
