@@ -15,11 +15,9 @@
     %li.nav-list__item
       =link_to "List", products_path, class: "nav-list__item__text", method: :get
 
-%h2.main-title Select buyer
+%h2.main-title Sale
 .nav-container
   %ul.nav-list.js-show
-    %span.nav-list__text Select
-    - @buyers.each do |buyer|
-      %li.nav-list__item
-        %span.nav-list__item__text
-          = link_to(buyer.name, new_buyer_path) 
+    %span.nav-list__text Select Buyer and Product
+    %li.nav-list__item
+        = link_to "Move to sale page", buyer_managements_path, class: "nav-list__item__text"
