@@ -1,12 +1,12 @@
 a {
-    padding: $basis-spacing;
-    text-decoration: none;
-    color: $font-color;
-  }
-  
-  input[type="submit"] {
-    width: $nav-container-width;
-    height: 50px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
+  padding: $basis-spacing;
+  text-decoration: none;
+  color: $font-color;
+}
+
+.button_to {
+  width: $nav-container-width;
+  height: 50px;
+  margin: 0 auto;
+  box-sizing: border-box;
+} 

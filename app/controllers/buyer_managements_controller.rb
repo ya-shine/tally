@@ -4,5 +4,5 @@ class BuyerManagementsController < ApplicationController
         @buyers = Buyer.all
         @products = Product.all
     end
-    
+
 end

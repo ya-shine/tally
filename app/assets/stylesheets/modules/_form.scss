@@ -1,0 +1,60 @@
+input {
+    width: $nav-container-width;
+    font-size: 20px;
+    color: $font-color;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 0.5em;
+    cursor: pointer;
+  }
+  
+  input[type="search"] {
+      line-height: 1.4;
+  }
+  
+  input[type="date"] {
+    width: 40%;
+    font-size: 15px;
+    display: inline-flex;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    line-height: 1.4;
+    width: $nav-container-width;
+    font-size: 16px;
+    color: $font-color;
+    margin-top: 10px;
+  }
+  
+  .date-field__text {
+    font-size: 20px;
+    color: #fff;
+    padding: 0 14px;
+  }
+  
+  select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      display: inline-block;
+      width: 100%;
+      margin-top: 1em;
+      padding: 0.6em 1.5em 0.6em 0.5em;
+      cursor: pointer;
+      line-height: 1.4;
+      font-size: 0.95em;
+      font-weight: 700;
+      color: $font-color;
+      background-color: $nav-list-background-color;
+      border: none;
+  }
+  
+  select:focus {
+      outline: 0;
+  }
+  
+  select::-ms-expand {
+      display: none;
+  } 
