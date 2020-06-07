@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_050443) do
+ActiveRecord::Schema.define(version: 2020_06_07_060545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buyer_managements", force: :cascade do |t|
+    t.bigint "buyer_id"
+    t.bigint "product_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buyer_id"], name: "index_buyer_managements_on_buyer_id"
+    t.index ["product_id"], name: "index_buyer_managements_on_product_id"
+  end
 
   create_table "buyers", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -29,4 +38,6 @@ ActiveRecord::Schema.define(version: 2020_06_07_050443) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "buyer_managements", "buyers"
+  add_foreign_key "buyer_managements", "products"
 end
