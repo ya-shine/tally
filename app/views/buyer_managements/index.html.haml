@@ -1,0 +1,8 @@
+%h2.main-title Select Resident and Diaper
+.nav-container
+  = form_with model: @buyer_management, local: true do |f|
+    = f.label :name, "Select Buyer"
+    = f.collection_select :resident_id, @buyers, :id, :name
+    = f.label :name, "Select Product"
+    = f.collection_select :diaper_id, @products, :id, :name
+    = f.submit "SEND" 
