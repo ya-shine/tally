@@ -1,0 +1,18 @@
+= javascript_pack_tag 'box_style'
+
+%h2.main-title List display of products
+.nav-container
+  - @products.each do |product|
+    %ul.nav-list.js-show
+      %span.nav-list__text= product.name
+      %span.nav-list__text : ¥
+      %span.nav-list__text= product.price
+      %li.nav-list__item
+        %span.nav-list__item__text
+          = link_to "Edit", "/products/#{product.id}/edit", method: :get
+      %li.nav-list__item
+        %span.nav-list__item__text
+          = link_to "Delete", "/products/#{product.id}", method: :delete
+.new-container
+  .new-container__text-field
+    = button_to "Top page", root_path, method: :get 
