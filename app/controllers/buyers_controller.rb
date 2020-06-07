@@ -29,7 +29,7 @@ class BuyersController < ApplicationController
 
     private
     def buyer_params
-        params.require(:buyer).permit!
+        params.require(:buyer).permit(:name)
     end
 
 end
