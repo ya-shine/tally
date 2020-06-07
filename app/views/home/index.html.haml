@@ -11,7 +11,9 @@
   %ul.nav-list.js-show
     %span.nav-list__text product
     %li.nav-list__item
-      %span.nav-list__item__text Register
+      =link_to "Register", new_product_path, class: "nav-list__item__text"
+    %li.nav-list__item
+      =link_to "List", products_path, class: "nav-list__item__text", method: :get
 
 %h2.main-title Select buyer
 .nav-container
