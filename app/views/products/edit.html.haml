@@ -1,9 +1,6 @@
-%h2.new-title Edit page
+%h2.main-title Edit page
 .nav-container
   = form_with model: @product, local: true do |f|
-    .new-container__text-field
-      = f.text_field :name, placeholder: "name", class: "new-container__text-field--input"
-    .new-container__text-field
-      = f.text_field :price, placeholder: "price", class: "new-container__text-field--input"
-    .new-container__text-field
-      = f.submit "UPDATE", class: "new-container__text-field--submit" 
+    = f.text_field :name, placeholder: "name"
+    = f.text_field :price, placeholder: "price"
+    = f.submit "UPDATE"

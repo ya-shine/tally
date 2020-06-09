@@ -1,7 +1,5 @@
-%h2.new-title Register buyer
-.new-container
+%h2.nav-title Register buyer
+.nav-container
   = form_with model: @buyer, local: true do |f|
-    .new-container__text-field
-      = f.text_field :name, placeholder: "input new buyer"
-    .new-container__text-field
-      = f.submit "SEND"
+    = f.text_field :name, placeholder: "input new buyer"
+    = f.submit "SEND"

@@ -4,7 +4,7 @@
     = f.search_field :buyer_id_eq
     = f.date_field :created_at_gteq
     %span.date-field__text ~
-    = f.date_field :created_at
+    = f.date_field :created_at_lteq
     = f.submit "SEND"
 
 %h2.main-title Select Resident and Diaper
@@ -13,5 +13,5 @@
     = f.label :name, "Select Buyer"
     = f.collection_select :resident_id, @buyers, :id, :name
     = f.label :name, "Select Product"
-    = f.collection_select :diaper_id, @products, :id, :name
+    = f.collection_select :product_id, @products, :id, :name
     = f.submit "SEND" 

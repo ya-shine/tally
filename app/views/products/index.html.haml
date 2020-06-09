@@ -13,6 +13,5 @@
       %li.nav-list__item
         %span.nav-list__item__text
           = link_to "Delete", "/products/#{product.id}", method: :delete
-.new-container
-  .new-container__text-field
-    = button_to "Top page", root_path, method: :get 
+.nav-container
+  = button_to "Top page", root_path, method: :get 

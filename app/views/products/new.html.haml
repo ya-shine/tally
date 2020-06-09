@@ -1,9 +1,6 @@
-%h2.new-title Register Product
-.new-container
+%h2.main-title Register Product
+.nav-container
   = form_with model: @product, local: true do |f|
-    .new-container__text-field
-      = f.text_field :name, placeholder: "input new paroduct", class: "new-container__text-field--input"
-    .new-container__text-field
-      = f.text_field :price, placeholder: "input new price", class: "new-container__text-field--input"
-    .new-container__text-field
-      = f.submit "SEND", class: "new-container__text-field--submit" 
+    = f.text_field :name, placeholder: "input new paroduct"
+    = f.text_field :price, placeholder: "input new price"
+    = f.submit "SEND"

@@ -1,0 +1,22 @@
+  
+%h2.main-title Search Result
+.table-container
+  %table
+    %tr
+      %th Buyer name
+      %th Product name
+      %th Product price
+      %th Date
+    - @buyer_managements.each do |buyer_management|
+      %tr
+        %td
+          = buyer_management.buyer.name
+        %td
+          = buyer_management.product.name
+        %td
+          %span.nav-list__text ¥
+          = buyer_management.product.price
+        %td
+          = buyer_management.set_created_at
+.nav-container
+  = button_to "Top page", root_path, method: :get

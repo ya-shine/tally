@@ -19,7 +19,6 @@ class BuyerManagementsController < ApplicationController
     def create
         @buyer_management = BuyerManagement.new(buyer_management_params)
         @buyer_management.save
-        redirect_to root_path
     end
 
     private

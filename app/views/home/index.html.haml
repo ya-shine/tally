@@ -14,6 +14,8 @@
       =link_to "Register", new_product_path, class: "nav-list__item__text"
     %li.nav-list__item
       =link_to "List", products_path, class: "nav-list__item__text", method: :get
+.nav-container
+  = button_to "Search page", buyer_managements_path, method: :get
 
 %h2.main-title Sale
 .nav-container
