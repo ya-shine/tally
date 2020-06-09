@@ -27,6 +27,11 @@ class BuyersController < ApplicationController
         buyer.destroy
     end
 
+    def search
+        @q = Buyer.search(search_params)
+        @buyers = @q.result
+    end
+
     private
     def buyer_params
         params.require(:buyer).permit(:name)

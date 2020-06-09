@@ -1,3 +1,12 @@
+%h2.main-title Search
+.nav-container
+  = search_form_for @q, url: search_buyer_managements_path do |f|
+    = f.search_field :buyer_id_eq
+    = f.date_field :created_at_gteq
+    %span.date-field__text ~
+    = f.date_field :created_at
+    = f.submit "SEND"
+
 %h2.main-title Select Resident and Diaper
 .nav-container
   = form_with model: @buyer_management, local: true do |f|

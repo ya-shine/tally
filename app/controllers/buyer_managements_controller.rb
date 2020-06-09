@@ -28,7 +28,7 @@ class BuyerManagementsController < ApplicationController
     end
 
     def search_params
-        params.require(:q).rermit!
+        params.require(:q).permit!
     end
     
 end

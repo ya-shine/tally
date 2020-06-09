@@ -2,6 +2,6 @@
 .nav-container
   = form_with model: @buyer, local: true do |f|
     .new-container__text-field
-      = f.text_field :name, placeholder: "name", class: "new-container__text-field--input"
+      = f.text_field :name, placeholder: "name"
     .new-container__text-field
-      = f.submit "UPDATE", class: "new-container__text-field--submit" 
+      = f.submit "UPDATE"
